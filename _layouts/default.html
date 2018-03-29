@@ -35,28 +35,28 @@
 				<a class="p-2 text-muted" href="/cv">CV</a>
 			</nav>
 		</div>
-		
+
 	</div>
 
 
 	<main role="main" class="container">
-		<div>
-
+		<div class="row">
 			{{ content }}
-
 		</div>
+		
+		<aside class="col-md-4 blog-sidebar">
+			<div class="p-3">
+				<h4 class="font-italic">Archivo</h4>
+				<ol class="list-unstyled mb-0">
+					{% for post in site.posts %}
+					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+					{% endfor %}
+				</ol>
+			</div>
+		</aside>
+
 	</main>
 
-	<aside class="col-md-4 blog-sidebar">
-		<div class="p-3">
-			<h4 class="font-italic">Archivo</h4>
-			<ol class="list-unstyled mb-0">
-				{% for post in site.posts %}
-				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ol>
-		</div>
-	</aside>
 
 	<footer>
 		<ul>
