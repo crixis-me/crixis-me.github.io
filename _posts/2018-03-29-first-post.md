@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "My first post"
-date: 2018-03-29
+title: "Mi primer publicación"
+date: 2018-03-31
 ---
-Yeap, Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
-Cheers!
+Ok, entonces todo funciona como es debido, perfecto. Gracias a [Jekyll](http://jekyllrb.com) ahora puedo ir generando contenido de forma simple y si se me da la gana, mejorar el aspecto del sitio luego xD!
+Salud!
