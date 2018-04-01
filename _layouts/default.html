@@ -4,13 +4,13 @@
 <head>
 	<title>{{ page.title }}</title>
 	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-reboot.min.css">
-	<script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
-	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-reboot.min.css">
+	<script src="/assets/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="./assets/css/blog.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
 </head>
 
 <body>
@@ -41,20 +41,21 @@
 
 	<main role="main" class="container">
 		<div class="row">
-			{{ content }}
-		</div>
-		
-		<aside class="col-md-4 blog-sidebar">
-			<div class="p-3">
-				<h4 class="font-italic">Archivo</h4>
-				<ol class="list-unstyled mb-0">
-					{% for post in site.posts %}
-					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-					{% endfor %}
-				</ol>
+			<div class="col-md-8 blog-main">
+				{{ content }}
 			</div>
-		</aside>
 
+			<aside class="col-md-4 blog-sidebar">
+				<div class="p-3">
+					<h4 class="font-italic">Archivo</h4>
+					<ol class="list-unstyled mb-0">
+						{% for post in site.posts %}
+						<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+						{% endfor %}
+					</ol>
+				</div>
+			</aside>
+		</div> <!-- .row -->
 	</main>
 
 

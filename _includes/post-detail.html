@@ -10,10 +10,10 @@
 	</h2>
 {% endif %}
 </h1>
-{% if page.title %}
-	<p class="blog-post-meta">page.date | date_to_string</p>
+{% if page.date %}
+	<p class="blog-post-meta">{{ page.date | date_to_string }}</p>
 {% endif %}
-{% if post.title %}
-	<p class="blog-post-meta">post.date | date_to_string</p>
+{% if post.date %}
+	<p class="blog-post-meta">{{ post.date | date_to_string }}</p>
 {% endif %}
 <div class="entry-content">{{ content }}</div>
